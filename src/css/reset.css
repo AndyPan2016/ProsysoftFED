@@ -1,0 +1,724 @@
+@charset "utf-8";
+/**
+ *
+ * _mixin.less
+ *
+ * Less公共函数
+ *   浮动、大小、边框、色彩、旋转、翻转等效果设置的公共方法。
+ *   理论上，任何一段样式代码在重复使用两次以上的，我们都可以把它封装成一个方法，
+ *   为了避免盲目的封装方法，则需要判断此段代码是否带有一定的逻辑性和复杂性，如果是一段普通的代码，则没有必要封装为方法
+ *
+ * version 1.2.3.3(主版本号.子版本号.编译版本号.修正版本号)
+ *
+ * @author pye-mail@163.com
+ *
+ * create log 2015年2月6日13:39:05
+ *
+ * last update 2015年6月6日17:16:46
+ *
+ */
+/**
+ * 清除浮动
+ * @remark clearfix 主要是用在浮动层的父层，而 clear 主要是用在浮动层与浮动层之间，和浮动层同一级
+ */
+/**
+ * 背景图标
+ * @path: 背景图标路径，不包括后缀名
+ * @width: 图标元素宽度
+ * @height: 图标元素高度
+ */
+/**
+ * 滤镜雾化效果
+ * @blur: 雾化程度
+ */
+/**
+ * 指定该盒子的大小包括边框的宽度(IE兼容性 IE8+)
+ * @box-type: content-box|border-box|inherit
+ */
+/**
+ * 盒模型
+ */
+/**
+ * 盒模型所占比例(比如：我们现在有三列，如果让这三列平均分配宽度，那么每一列的box-flex值就为1；如果第一列为1，第二列为1，第三列为2，那么第三列的宽度就应该是第一、二列的两倍)
+ *      此处相对于box-orient的设置，如果box-orient的设置为水平排列，这里则按照宽度等比划分，如果为垂直排列，则按照高度等比排列
+ * @value 比例值，默认为1
+ */
+/**
+ * 盒模型子容器排列方式
+ * @type 排列方式(horizontal | vertical | inline-axis | block-axis | inherit)，默认为'horizontal'水平排列
+ */
+/**
+ * 元素的浮动
+ * @float 浮动方向(left,right)
+ */
+/**
+ * 块元素居中
+ */
+/**
+ * 将元素转换为行级块元素
+ */
+/**
+ * 占位符placeholder样式设置
+ * @color 字体颜色
+ * @font-size 字体大小
+ * @font-family 字体
+ */
+/**
+ * 元素大小设置
+ * @width 宽度
+ * @height 高度
+ * @remark 一个参数时表示设置宽度；两个参数时表示分别设置宽度和高度
+ */
+/**
+ * 元素行高设置
+ * @lineHeight 行高
+ * @remark 无
+ */
+/**
+ * 文本(水平)对齐方式
+ * @align 对齐方式(left[默认]、center、right)
+ * @remark 无
+ */
+/**
+ * (垂直)对齐方式
+ * @vertical-align 对齐方式(top[默认]、middle、bottom、baseline)
+ * @remark baseline.基线对齐
+ */
+/**
+ * 文本缩进
+ * @text-indent 缩进值
+ * @remark 默认为2em
+ */
+/**
+ * 文本划线
+ * @line-type 划线类型(overline.顶划线 through.中划线 underline.下划线[默认])
+ * @remark 默认为2em
+ */
+/**
+ * 定义字体
+ * @font-family 字体
+ * @remark 默认为'微软雅黑'
+ */
+/**
+ * 定义字体大小
+ * @font-size 字体大小
+ * @remark 默认为'12px'
+ */
+/**
+ * 定义字体颜色
+ * @color 字体颜色
+ * @remark 默认为'#fff'
+ */
+/**
+ * 定义字体级别
+ * @font-weight 字体粗细级别
+ * @remark 默认为'normal'
+ */
+/**
+ * 定义元素定位
+ * @type 定位类型
+ * @remark 默认为'initial'
+ */
+/**
+ * 定义边框大小
+ * @border-width 边框宽度
+ * @direction 设置边框方向
+ * @remark 边框宽度默认为'1px'，设置边框方向默认为所有：'all'
+ */
+/**
+ * 定义边框类型
+ * @border-style 边框类型
+ * @direction 设置边框方向
+ * @remark 边框类型默认为'solid'，设置边框方向默认为所有：'all'
+ */
+/**
+ * 定义边框颜色
+ * @border-color 边框颜色
+ * @direction 设置边框方向
+ * @remark 边框颜色默认为'#000'，设置边框方向默认为所有：'all'
+ */
+/**
+ * 定义间距(外边距)
+ * @margin 边距值
+ * @direction 设置边距方向
+ * @remark 边距值默认为'5px'，设置边距方向默认为所有：'all'
+ */
+/**
+ * 定义间距(内边距)
+ * @padding 边距值
+ * @direction 设置边距方向
+ * @remark 边距值默认为'5px'，设置边距方向默认为所有：'all'
+ */
+/**
+ * Table 表格行hover设置
+ * @background 行初始背景
+ * @background-hover 行hover背景
+ * @remark 无
+ */
+/**
+ * 文本超出用"..."代替
+ * @clamp 控制多少行后文本超出用"..."代替(默认为一行)
+ * @remark 需要设置元素为block或inline-block；多行时，需要设置元素高度
+ */
+/**
+ * 文本居中
+ * @line-height 行高
+ * @remark 设置文本上下左右居中，需提供元素行高
+ */
+/**
+ * 自动换行
+ * @mode CSS4新属性参数，none | manual | auto
+ */
+/**
+ * 元素透明度
+ * @opacity 透明度(0~1之间)
+ */
+/**
+ * 背景透明度
+ * @r 颜色值
+ * @g 颜色值
+ * @b 颜色值
+ * @a 透明度(0~1之间)
+ */
+/**
+ * input框定义
+ * @font-color 字体颜色
+ * @background 背景颜色
+ * @border-color 边框颜色
+ */
+/**
+ * Retina Images
+ * @remark -webkit-min-device-pixel-ratio的常见值对照:
+ * ==========-webkit-min-device-pixel-ratio为1.0==========
+ *  所有非Retina的Mac
+ *  所有非Retina的iOS设备
+ *  Acer Iconia A500 
+ *  Samsung Galaxy Tab 10.1
+ *  Samsung Galaxy S
+ *  ==========-webkit-min-device-pixel-ratio为1.3==========
+ *  Google Nexus 7
+ *  ==========-webkit-min-device-pixel-ratio为1.5==========
+ *  Google Nexus S 
+ *  Samsung Galaxy S II 
+ *  HTC Desire
+ *  HTC Desire HD
+ *  HTC Incredible S 
+ *  HTC Velocity
+ *  HTC Sensation
+ *  ==========-webkit-min-device-pixel-ratio为2.0==========
+ *  iPhone 4
+ *  iPhone 4S
+ *  iPhone 5
+ *  iPad (3rd generation)
+ *  iPad 4
+ *  所有Retina displays 的MAC
+ *  Google Galaxy Nexus
+ *  Google Nexus 4
+ *  Google Nexus 10
+ *  Samsung Galaxy S III
+ *  Samsung Galaxy Note II
+ *  Sony Xperia S
+ *  HTC One X 
+ */
+/**
+ * 圆角 单边框 Top
+ * @radius 圆角值
+ */
+/**
+ * 圆角 单边框 Right
+ * @radius 圆角值
+ */
+/**
+ * 圆角 单边框 Bottom
+ * @radius 圆角值
+ */
+/**
+ * 圆角 单边框 Left
+ * @radius 圆角值
+ */
+/**
+ * 圆角
+ * @radius 圆角值
+ */
+/**
+ * 元素阴影
+ * @shadow (h-shadow v-shadow blur spread color inset)
+ *      h-shadow:必需。水平阴影的位置。允许负值。
+ *      v-shadow:必需。垂直阴影的位置。允许负值。
+ *      blur    :可选。模糊距离。
+ *      spread  :可选。阴影的尺寸。
+ *      color   :可选。阴影的颜色。请参阅 CSS 颜色值。
+ *      inset   :可选。将外部阴影 (outset) 改为内部阴影。
+ */
+/**
+ * 文本阴影
+ * @shadow (h-shadow v-shadow blur color)
+ *      h-shadow:必需。水平阴影的位置。允许负值。
+ *      v-shadow:必需。垂直阴影的位置。允许负值。
+ *      blur    :可选。模糊距离。
+ *      color   :可选。阴影的颜色。请参阅 CSS 颜色值。
+ */
+/**
+ * 效果过度
+ * @shadow (property duration timing-function delay)
+ *      property       :规定设置过渡效果的 CSS 属性的名称。
+ *      duration       :规定完成过渡效果需要多少秒或毫秒。
+ *      timing-function:规定速度效果的速度曲线。
+ *      delay          :定义过渡效果何时开始。
+ */
+/**
+ * 旋转(2D)
+ * @degrees 旋转度数
+ * @remark 为正数时，顺时针旋转；为负数时，逆时针旋转
+ */
+/**
+ * 旋转(3D)
+ * @degrees 旋转度数
+ * @remark 为正数时，顺时针旋转；为负数时，逆时针旋转;
+ *         经测试，rotate3d并无效果，且rotateX、rotateY、rotateZ需单独使用才有效果
+ */
+/**
+ * 倾斜
+ * @skew X、Y轴倾斜度数
+ * @remark 同时设置X、Y轴倾斜度数
+ */
+/**
+ * 倾斜
+ * @x X轴倾斜度数
+ * @y Y轴倾斜度数
+ * @remark 一个参数时表示设置X轴；两个参数时表示分别设置X、Y轴
+ */
+/**
+ * 比例
+ * @scale X、Y轴缩放比例
+ * @remark 同时设置X、Y轴缩放比例
+ */
+/**
+ * 比例
+ * @x X轴缩放比例
+ * @y Y轴缩放比例
+ * @remark 缩放，1为原始大小；正数放大，负数缩小；一个参数时表示X、Y轴同时设置；两个参数时表示分别设置X、Y轴
+ */
+/**
+ * 比例(3d)
+ * @scale X、Y、Z轴缩放比例
+ * @remark 同时设置X、Y、Z轴缩放比例
+ */
+/**
+ * 比例
+ * @x X轴缩放比例
+ * @y Y轴缩放比例
+ * @remark 缩放，1为原始大小；正数放大，负数缩小；一个参数时表示X、Y轴同时设置；两个参数时表示分别设置X、Y轴
+ */
+/**
+ * (位置)变动，位移
+ * @translate X轴位置、Y轴位置
+ * @remark 同时设置X、Y轴位移位置
+ */
+/**
+ * (位置)变动，位移
+ * @x X轴位置
+ * @y Y轴位置
+ * @remark 一个参数时表示设置X轴；两个参数时表示分别设置X、Y轴
+ */
+/**
+ * 3D(位置)变动，位移
+ * @translate3d X、Y、Z轴位置
+ * @remark 同时设置X、Y轴、Z轴位移位置
+ */
+/**
+ * 3D(位置)变动，位移
+ * @x X轴位置
+ * @y Y轴位置
+ * @z Z轴位置
+ * @remark 一个参数时表示设置X轴；两个参数时表示分别设置X、Y轴；三个参数时表示分别设置X、Y、Z轴
+ */
+/**
+ * 动画(自定义所有参数及格式)
+ * @animation 动画参数
+ * @remark 默认值：all .2s ease 0 1 normal(规定需要绑定到选择器的 keyframe 名称、规定完成动画所花费的时间，以秒或毫秒计、规定动画的速度曲线、规定在动画开始之前的延迟、规定动画应该播放的次数、规定是否应该轮流反向播放动画)
+ */
+/**
+ * 动画(常用设置)
+ * @name 动画名称(默认值：animation)
+ * @time 动画时间(默认值：.2s)
+ * @timing 动画速度曲线(默认值：ease)
+ * @count 播放次数(默认值：1)
+ * @remark 
+ */
+/**
+ * 动画名称设置
+ * @name 动画名称
+ * @remark keyframename|none(规定需要绑定到选择器的 keyframe 的名称|规定无动画效果（可用于覆盖来自级联的动画）)
+ */
+/**
+ * 动画时间设置
+ * @time 动画时间
+ * @remark time(规定完成动画所花费的时间。默认值是 1s)
+ */
+/**
+ * 动画速度曲线设置
+ * @timing 动画速度曲线类型
+ * @remark linear|ease|ease-in|ease-out|ease-in-out(直线匀速|以低速开始，然后加快，在结束前变慢|以低速开始|以低速结束|以低速开始和结束)
+ */
+/**
+ * 定义动画何时开始
+ * @time 动画开始时间(以秒或毫秒计)
+ * @remark time(可选。定义动画开始前等待的时间，以秒或毫秒计。默认值是 0)
+ */
+/**
+ * 动画的播放次数
+ * @count 次数
+ * @remark n|infinite(定义动画播放次数的数值|规定动画应该无限次播放。默认值是 1)
+ */
+/**
+ * 定义动画是否应该轮流反向播放
+ * @direction 参数
+ * @remark normal|alternate(默认值。动画应该正常播放|动画应该轮流反向播放)
+ */
+/**
+ * 定义动画暂停和播放
+ * @play 暂停/播放
+ * @remark paused|running(规定动画暂停|规定动画播放。默认值为 paused)
+ */
+/**
+ * 规定填充模式
+ * @mode 模式
+ * @remark none|forwards|backwards|both(不改变默认行为|动画完成后，保持最后一个属性值（在最后一个关键帧中定义）|在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）|向前和向后填充模式都被应用。默认值为 forwards)
+ */
+/**
+ * 定义当元素不面向屏幕时是否可见
+ * @visibility 类型
+ * @remark visible|hidden(背面可见|背面不可见。默认值为 hidden)
+ */
+/**
+ * 
+ * @column-count 将内容分为多少列
+ * @column-gap 列间距
+ * @remark 无
+ */
+/**
+ * 设置或检索对象的区域是否允许用户缩放，调节元素尺寸大小
+ * @direction 类型
+ * @remark none|both|horizontal|vertical(不允许用户调整元素大小|用户可以调节元素的宽度和高度|用户可以调节元素的宽度|用户可以调节元素的高度)
+ */
+/* Horizontal gradient, from left to right（水平渐变，从左到右） */
+/* Vertical gradient, from top to bottom （垂直渐变，从上到下）*/
+/**
+ * 橡皮筋动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 凝胶物(关键帧)
+ * @remark 无
+ */
+/**
+ * 弹跳动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 闪烁动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 旋转动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 信号波动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 摇摆动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 脉冲动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 翻转(Y)动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 翻转(X)动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 翻转(X)动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 翻转(Y)动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 卷进动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 出现动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 出现动画(关键帧)
+ * @remark 无
+ */
+/**
+ * 消失动画(关键帧)
+ * @remark 无
+ */
+html {
+  font-family: "Helvetica Neue", "Microsoft YaHei", Helvetica, STHeiTi, Arial, sans-serif;
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.15;
+  color: #333333;
+  background-color: white;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", "Microsoft YaHei", Helvetica, STHeiTi, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+  margin: 0;
+}
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none outside none;
+}
+h1,
+h2,
+h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #cccccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.all_flag_r,
+.all_flag_r_nav li {
+  box-sizing: content-box !important;
+}

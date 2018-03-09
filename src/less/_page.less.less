@@ -1,0 +1,136 @@
+@import "./_mixins.less";
+
+@space: 20px;
+//版本号
+@version: 'v1.0';
+//设计图的最大宽度
+@uiMaxWidth: 1920px;
+//页面内容宽度
+@uiContentWidth: 1200px;
+//背景相对路径
+@backgroundPath: '../images/';
+//@backgroundPath: 'http://cimg.178.com/[178]/OrcsMustDie_PC_17_04_20/images/';
+
+.background(@bg, @pos1: 0, @pos2: 0, @repeat: no-repeat){
+    background: url('@{backgroundPath}@{bg}?@{version}') @pos1 @pos2 @repeat;
+}
+.background-center(@bg){
+    .background(@bg, center, center);
+}
+.background-image(@bg){
+    background-image: url('@{backgroundPath}@{bg}?@{version}');
+}
+
+.page-wrap{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	max-width: @uiMaxWidth;
+	//min-width: @uiContentWidth;
+	position: relative;
+	.clearfix();
+
+	.fn-wrap{
+		width: @uiContentWidth;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+		min-height: 120px;
+		.clearfix();
+	}
+
+	.page-region-wrap{
+		height: auto;
+		margin: 0 auto;
+		position: relative;
+		.clearfix();
+	}
+
+}
+@charset "UTF-8";
+/**
+ * 选项卡 LESS
+ * @authors 潘毅 (pye-mail@163.com)
+ * @date    18-03-07 18:10:03
+ */
+
+.ui-tabs{
+	min-width: 300px;
+	min-height: 300px;
+	position: relative;
+	.clearfix();
+
+	@hdH: 50px;
+	.ui-tabs-hd{
+		height: @hdH;
+		overflow: hidden;
+
+		.tabs-hd-item{
+			display: inline-block;
+			float: left;
+			height: 100%;
+			line-height: @hdH;
+			min-width: 100px;
+			padding: 0 10px;
+			text-align: center;
+			text-decoration: none;
+			outline: none;
+			font-size: 14px;
+			.transition(all .2s ease);
+
+			&.active{font-weight: bold;}
+			&.disabled{color: #ddd;cursor: text;}
+			&:hover, &.hover{};
+		}
+	}
+
+	.ui-tabs-bd{
+		position: absolute;
+		top: @hdH;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		overflow-y: auto;
+
+		&.tab-hd-auto{
+			/*自动高度 且最大高度为500px*/
+			bottom: initial;
+			max-height: 500px;
+		}
+
+		.tabs-bd-item{
+			width: 100%;
+			height: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			.transition(all .2s ease);
+			.opacity(0);
+
+			&.iframe{
+				bottom: 6px;
+				iframe{
+					border: 0;
+					width: 100%;
+					height: 100%;
+					overflow: auto;
+				}
+			}
+
+			&.active{
+				z-index: 1;
+				.opacity(1);
+			}
+		}
+	}
+}
+@charset "UTF-8";
+/**
+ * 组件化 DEMO Less - 组件的独立样式文件
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2017-10-18 13:47:28
+ */
+
