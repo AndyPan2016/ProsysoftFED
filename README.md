@@ -1,9 +1,10 @@
-# Generator-SimplePage
-# 星游前端专题项目介绍
+# Prosysoft FED
+# 普易软件前端开发(Front-End Development)项目
 
 ## 项目描述
 
-专题项目，是用来搭建游戏平台的活动专题页面的一个简单项目，主要应用于178、PTBUS、TGBUS等三个平台。其中，项目内容主要包括相关游戏的活动介绍、活动展示等常用功能。
+
+前端开发项目，主要用于前端团队组件的开发，主要用于传统前端技术的项目组件开发
 
 ---------------------------------------------------------------------
 
@@ -27,6 +28,8 @@
 	│	│	├── plugin.**.css          # 插件样式
 	│	│   ├── page.**.css            # 页面样式
 	│	│   └── **.css                 # 其他样式
+	│	├── html/                      # html资源
+	│	│   └── **.html                # html文件
 	│	├── images/                    # 图片资源
 	│	│   ├── sprit.png              # 雪碧图
 	│	│   └── **.**                  # 其他图
@@ -56,6 +59,17 @@
 	│	│   ├── _mixins.less           # less公共函数引用文件
 	│	│   ├── page.less              # 页面样式
 	│	│   └── **.less                # 其他样式
+	│	├── sass/                      # sass资源
+	│	│   ├── _commons/              # sass公共样式资源文件夹
+	│	│   │   ├── _variables.sass    # sass公共变量
+	│	│   │   ├── animate.sass       # sass公共动画
+	│	│   │   ├── common.sass        # sass公共样式
+	│	│   │   └── reset.sass         # sass公共重置样式
+	│	│   ├── _mixins/               # sass公共函数资源文件夹
+	│	│   │   └── **.sass            # sass公共函数资源文件
+	│	│   ├── _mixins.sass           # sass公共函数引用文件
+	│	│   ├── page.sass              # 页面样式
+	│	│   └── **.sass                # 其他样式
 	│	└── index.html                 # 页面入口
 	├──	.gitignore                     # 忽略提交文件
 	├── gulpfile.js                    # gulp任务配置 
